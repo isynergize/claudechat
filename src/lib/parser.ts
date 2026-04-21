@@ -57,15 +57,18 @@ export function parseChats(raw: unknown): { chats: AnnotatedChat[]; errors: stri
       continue
     }
 
-    const validMessages = item.chat_messages
-      .map((m: Record<string, unknown>) => ({ ...m, text: extractText(m) }))
+    const validMessages = (item.chat_messages as unknown[])
+      .map((m) => {
+        const msg = m as Record<string, unknown>
+        return { ...msg, text: extractText(msg) }
+      })
       .filter((m, j) => {
         if (!isValidMessage(m)) {
           errors.push(`Chat "${item.name}": message at index ${j} is invalid, skipped.`)
           return false
         }
         return true
-      })
+      }) as Message[]
 
     const wordFrequencies = computeWordFrequencies(validMessages)
     const topTerms = wordFrequencies.slice(0, 20).map(w => w.text)
