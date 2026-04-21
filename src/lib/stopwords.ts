@@ -1,0 +1,43 @@
+export const STOPWORDS = new Set([
+  // Articles, conjunctions, prepositions
+  'a','about','above','after','again','against','all','am','an','and','any',
+  'are','as','at','be','because','been','before','being','below','between',
+  'both','but','by','can','did','do','does','doing','down','during','each',
+  'few','for','from','further','get','got','had','has','have','having','he',
+  'her','here','him','his','how','i','if','in','into','is','it','its',
+  'itself','just','like','make','me','more','most','my','no','not','now',
+  'of','off','on','once','only','or','other','our','out','over','own',
+  'same','she','should','so','some','such','than','that','the','their',
+  'them','then','there','these','they','this','those','through','to','too',
+  'under','until','up','us','was','we','were','what','when','where','which',
+  'while','who','whom','why','will','with','would','you','your','yours',
+  // Contraction fragments (apostrophe-stripped remnants)
+  // you're→re, it's→s, don't→t, they've→ve, I'll→ll, I'd→d, I'm→m
+  're','ve','ll','t','s','d','m','em','nt',
+  // Contraction stems
+  'don','won','can','isn','aren','weren','hadn','hasn','haven',
+  'didn','doesn','wouldn','couldn','shouldn','mustn','needn','shan',
+  'tis','twas','wont',
+  // Filler / vague words
+  'also','really','very','much','many','thing','things','something','anything',
+  'everything','nothing','want','need','use','used','using','know','think',
+  'say','said','see','look','way','time','new','one','two','three','four',
+  'five','six','seven','eight','nine','ten','yeah','yes','okay','ok',
+  'maybe','actually','basically','literally','going','come','back','well',
+  'good','great','sure','let','even','still','already','always','never',
+  'ever','though','however','since','help','work','works','working','quite',
+  'rather','seems','seem','seemed','put','put','set','sets','got','get',
+  'getting','make','makes','made','take','takes','took','give','gives',
+  'gave','come','comes','came','keep','keeps','kept','try','tries','tried',
+  'ask','asked','asks','feel','feels','felt','become','becomes','became',
+  'show','shows','showed','tell','tells','told','call','calls','called',
+  'mean','means','meant','might','could','must','shall','may','also',
+  'bit','lot','lots','kind','sort','type','part','parts','place','places',
+  'point','points','case','cases','fact','facts','idea','ideas','number',
+  'line','lines','world','people','person','year','years','day','days',
+  'week','weeks','month','months','hand','hands','end','ends','home',
+  'ago','almost','along','already','around','away','often','usually',
+  'every','each','first','last','next','long','large','small','big',
+  'high','low','early','later','little','own','right','left','old',
+  'young','able','just','less','more','most','such','without',
+])

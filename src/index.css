@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #0f0f13;
+    --bg-card: #17171f;
+    --bg-elevated: #1e1e28;
+    --border: #2a2a38;
+    --text: #c9c9d4;
+    --text-muted: #6b6b80;
+    --text-heading: #f0f0f5;
+    --accent: #7c6af7;
+    --accent-light: rgba(124, 106, 247, 0.15);
+    --accent-border: rgba(124, 106, 247, 0.4);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Varta', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--text-heading);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  #root {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+}
